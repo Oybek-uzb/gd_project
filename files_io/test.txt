@@ -1,0 +1,2 @@
+Writing from ./files_io/main.go
+Appending from ./file_io/main.go
