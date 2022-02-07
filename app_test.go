@@ -1,6 +1,17 @@
 package main
 
-import "testing"
+import (
+	"fmt"
+	"os"
+	"testing"
+)
+
+func TestMain(m *testing.M) {
+	fmt.Println("setup")    // will be executed before all tests
+	r := m.Run()            // runs all test for "main" package
+	fmt.Println("teardown") // will be executed after all tests
+	os.Exit(r)              // exit code
+}
 
 func TestMultiple(t *testing.T) {
 	// preparing data for tests, extra logic, db connection, etc.
